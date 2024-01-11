@@ -1,0 +1,7 @@
+"name": "James Bund","phone": "JB00777709","skills": "Sniper, Ground Vehicle Driver","restrictions": "Cannot travel by air"
+
+"name": "Charlie Angle","phone": "CA013443","skills": "Martial Arts Fighter, Expert Swimmer","restrictions": "fear of height"
+
+"name": "Sakthi Maan","phone": "SM1100203","skills": "Expert Hacker of Electronics, Engines, Computers","restrictions": "fear of insects"
+
+"name": "Spyder Nam","phone": "SN8992288","skills": "Expert Multi-storey Building Climber","restrictions": "fear of dogs"
