@@ -6,11 +6,7 @@ from langchain.document_loaders import DirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import SentenceTransformerEmbeddings
 from langchain.vectorstores import FAISS
-
-from dotenv import load_dotenv
 import re, os
-
-load_dotenv()
 
 class DataLoader:
     def __init__(self, path):
@@ -67,7 +63,7 @@ class VectorDatabase:
 class LLMChain:
     def __init__(self, model):
         self.llm = ChatOpenAI(model_name=model, 
-                              openai_api_key=os.getenv("OPENAI_KEY"), 
+                              openai_api_key=st.secrets["OPENAI_API_KEY"], 
                               temperature=0.5)
 
     def execute_chain(self, qa_chain, question, docs):
