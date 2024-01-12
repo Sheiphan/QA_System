@@ -103,8 +103,8 @@ def run_app():
 
     prompt = (
         "Assume you are a senior consultant to a Police Department (PD). "
-        "Find two agents that are best suited for the task, consider the context that you have "
-        "and answer with reason. Keep the answer to the point and precise."
+        "Find two agents that are best suited for the task, consider the context that you have using the restrictions that they have."
+        "Answer with reason. Keep the answer to the point and precise."
     )
     user_query = get_user_input(prompt)
 
