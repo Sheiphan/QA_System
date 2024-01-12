@@ -88,8 +88,7 @@ def display_result(response):
 
 
 def get_user_input(prompt):
-    return st.text_input("Enter your task:", prompt)
-
+    return f"{st.text_input('Input:')}. {prompt}"
 
 def find_agents_button():
     return st.button("Find Agents")
