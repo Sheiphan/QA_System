@@ -103,7 +103,7 @@ def run_app():
 
     prompt = (
         "Assume you are a senior consultant to a Police Department (PD). "
-        "Find two agents that are best suited for the task, consider the context that you have using the restrictions that they have."
+        "Find two agents that are best suited for the task, consider the skills and restrictions that they have."
         "Answer with reason. Keep the answer to the point and precise."
     )
     user_query = get_user_input(prompt)
@@ -127,7 +127,7 @@ def run_app():
             st.error(f"Error generating chroma vectors or searching for similar documents: {e}")
             return
 
-        ai_chain = LLMChain("gpt-3.5-turbo")
+        ai_chain = LLMChain("gpt-4-1106-preview")
         if ai_chain.llm is None:
             st.error("Error initializing ChatOpenAI. Check your API key.")
             return
