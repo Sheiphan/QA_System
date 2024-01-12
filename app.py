@@ -99,6 +99,8 @@ def run_app():
     The `run_app` function takes user input, searches for matching documents, and uses a language model
     to generate a response based on the user query and the matching documents.
     """
+    st.set_page_config(layout="wide")
+
     st.title("AI Challenge Application Demo | QA System")
 
     prompt = (
