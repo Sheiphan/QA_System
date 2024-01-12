@@ -127,7 +127,7 @@ def run_app():
             st.error(f"Error generating chroma vectors or searching for similar documents: {e}")
             return
 
-        ai_chain = LLMChain("gpt-4-1106-preview")
+        ai_chain = LLMChain("gpt-3.5-turbo")
         if ai_chain.llm is None:
             st.error("Error initializing ChatOpenAI. Check your API key.")
             return
