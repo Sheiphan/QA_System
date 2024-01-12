@@ -46,7 +46,7 @@ class VectorDatabase:
     def __init__(self):
         self.embedding = SentenceTransformerEmbeddings()
 
-    def generate_chroma(self, documents):
+    def generate_faiss(self, documents):
         """
         The function generates chroma vectors using FAISS from a given set of documents and an
         embedding.
@@ -121,7 +121,7 @@ def run_app():
         
         embedding_mgr = VectorDatabase()
         try:
-            chroma_db = embedding_mgr.generate_chroma(segmented_docs)
+            chroma_db = embedding_mgr.generate_faiss(segmented_docs)
             matching_documents = chroma_db.similarity_search(user_query)
         except Exception as e:
             st.error(f"Error generating chroma vectors or searching for similar documents: {e}")
