@@ -21,7 +21,7 @@ class DataLoader:
         loader = DirectoryLoader(self.path)
         return loader.load()
 
-    def divide_documents(self, documents, size=1000, overlap=20):
+    def divide_documents(self, documents, size=500, overlap=10):
         """
         The function divides a list of documents into smaller chunks based on a specified size and
         overlap.
